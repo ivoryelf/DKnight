@@ -33,6 +33,11 @@ public class Weapon : MonoBehaviour
 
     public void Attack()
     {
+        //Collider[] colliders = 
+        //if(collider.tag == "Enemy")
+        //{
+        //    collider.GetComponent<Enemy>().doDamage();
+        //}
 
     }
 }

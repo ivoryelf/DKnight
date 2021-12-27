@@ -47,12 +47,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Enemy.cs" />
-     <Compile Include="Assets\Script\game_main.cs" />
-     <Compile Include="Assets\Script\Player.cs" />
+     <Compile Include="Assets\Design\AurynSky\Forest Pack\Scripts\MaterialMover.cs" />
      <Compile Include="Assets\Script\Follow.cs" />
      <Compile Include="Assets\Script\Weapon.cs" />
+     <Compile Include="Assets\Script\Enemy.cs" />
+     <Compile Include="Assets\Design\AurynSky\Forest Pack\Scripts\WheelController.cs" />
+     <Compile Include="Assets\Design\AurynSky\Forest Pack\Scripts\ChestDemo.cs" />
+     <Compile Include="Assets\Script\game_main.cs" />
+     <Compile Include="Assets\Design\AurynSky\Forest Pack\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Script\Player.cs" />
+     <Compile Include="Assets\Script\SpawnManager.cs" />
      <None Include="Assets\Design\Casual RPG Character - Ekard\readme.txt" />
+     <None Include="Assets\Design\AurynSky\Forest Pack\READ ME.txt" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Program Files/Unity/Editor/2020.3.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

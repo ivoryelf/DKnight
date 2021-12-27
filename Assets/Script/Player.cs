@@ -56,18 +56,33 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+/*        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Enemy>().doDamage(5);
+            Debug.Log(collision.gameObject.name);
+            Debug.Log(collision.gameObject.tag);
+        }*/
+    }
+
+
     void Attack()
     {
-       //if (equip_weapon == null)
-       //     return;
-        fire_delay += Time.deltaTime;
-        fire_ready = equip_weapon.rate < fire_delay;
+/*        Collider[] cols = Physics.OverlapBoxAll(pos, boxsize, 0);
+        foreach(Collider col in cols)
+        {
+            if(collider.tag == "Enemy")
+            {
+                col.GetComponent<Enemy>().TakeDamage();
+            }
+        }*/
 
         if(fire_down)
         {
-            equip_weapon.Use();
+          //  equip_weapon.Use();
             anim.SetTrigger("trAttack");
-            fire_delay = 0;
+            //fire_delay = 0;
         }
     }
 }
