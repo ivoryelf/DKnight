@@ -48,6 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Design\AurynSky\Forest Pack\Scripts\MaterialMover.cs" />
+     <Compile Include="Assets\Script\SpawnManager.cs" />
      <Compile Include="Assets\Script\Follow.cs" />
      <Compile Include="Assets\Script\Weapon.cs" />
      <Compile Include="Assets\Script\Enemy.cs" />
@@ -56,7 +57,6 @@
      <Compile Include="Assets\Script\game_main.cs" />
      <Compile Include="Assets\Design\AurynSky\Forest Pack\Scripts\Rotator.cs" />
      <Compile Include="Assets\Script\Player.cs" />
-     <Compile Include="Assets\Script\SpawnManager.cs" />
      <None Include="Assets\Design\Casual RPG Character - Ekard\readme.txt" />
      <None Include="Assets\Design\AurynSky\Forest Pack\READ ME.txt" />
  <Reference Include="UnityEngine">
