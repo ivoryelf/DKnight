@@ -9,7 +9,22 @@ public class SpawnManager : MonoBehaviour
     public Transform[] spawnPoints;
     public int max_sub_level;
     public int[] level_enemys;
-    public int e_cnt, max_cnt; 
+    public int e_cnt, max_cnt;
+
+    protected static SpawnManager instance = null;
+    public static SpawnManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = System.Activator.CreateInstance(typeof(SpawnManager)) as SpawnManager;
+            }
+            return instance;
+        }
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,21 +35,24 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(e_cnt < max_cnt)
-        {
-            int x = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy, spawnPoints[x]);
-            e_cnt++;
-        }
+
     }
 
-    void GenerateEnemy(int level, int num_enemy)
+    public bool check_trigger()
     {
-/*        level_enemys[level] = num_enemy;
-        for(int i: i < num_enemy: i++)
+        if(e_cnt < max_cnt)
         {
-            Instantiage(enemy, spawnPoints[i]);
-        }*/
+            for (int i = 0; i < max_cnt; i++)
+            {
+                //int x = Random.Range(0, spawnPoints.Length);
+                enemy.SetActive(true);
+                Instantiate(enemy, spawnPoints[i]);
+                e_cnt++;
+                Debug.Log("check trigger!!");
+            }
+        }
+
+        return true;
     }
 
 }
